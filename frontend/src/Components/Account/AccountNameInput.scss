@@ -1,0 +1,63 @@
+@import "../../UIKit/styles/utils";
+@import "../../UIKit/styles/responsive";
+
+.input-container {
+  position: relative;
+  height: 44px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(2, 21, 40, 0.12);
+  display: flex;
+  align-items: center;
+  &.invalid {
+    border-bottom-color: $color-orange;
+  }
+}
+
+.invalid-char {
+  color: $color-orange;
+}
+
+.input {
+  font-family: RobotoMono, monospace;
+  background: transparent;
+  position: absolute;
+  outline: none;
+  padding: 0;
+  border: none;
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: transparent;
+  caret-color: $color-text-primary;
+  span {
+    font-family: RobotoMono, monospace;
+    padding: 0.5px;
+    outline: none;
+  }
+}
+
+.display.input {
+  color: $color-text-primary;
+}
+
+.invalid {
+  input.input {
+    color: transparent;
+  }
+  .display.input {
+    color: $color-text-primary;
+  }
+}
+
+.copy-to-clipboard {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  img {
+    width: 12px;
+    margin-top: 10px;
+  }
+}

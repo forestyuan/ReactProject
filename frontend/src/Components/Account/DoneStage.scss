@@ -1,0 +1,79 @@
+@import "../../UIKit/styles/utils";
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.title-container {
+  margin-top: 140px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.account-name-container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.account-name {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: $color-text-primary;
+}
+
+.account-name-hint {
+  font-size: 12px;
+  color: $color-text-shallow;
+}
+
+.resource-label {
+  margin-top: 16px;
+  font-size: 12px;
+  font-weight: bold;
+  color: $color-text-primary;
+}
+
+.hint-container {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.divider {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  color: $color-text-shallow;
+  hr {
+    height: 1px;
+    background: $color-text-shallow;
+    border: none;
+    flex: 1;
+  }
+}
+
+.buttons {
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hint {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 12px;
+  color: $color-text-secondary;
+}

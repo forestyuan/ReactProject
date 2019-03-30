@@ -1,0 +1,95 @@
+@import '../../UIKit/styles/utils';
+@import '../../UIKit/styles/responsive-landing';
+
+.about-3rwallet-section-container {
+  background-color: $color-pure-white;
+  padding: 160px 240px 200px 240px;
+  @include media-md() {
+    padding: 112px 40px 200px 40px;
+  }
+  @include media-sm() {
+    padding: 112px 72px 120px 72px;
+  }
+  @include media-lt-sm() {
+    padding: 32px 40px 120px 40px;
+  }
+  p, h2, h3 {
+    margin: 0;
+  }
+  .about-wallet {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include media-lt-md() {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .left-container {
+    width: 600px;
+    padding-top: 80px;
+    @include media-md() {
+      width: 400px;
+    }
+    @include media-sm() {
+      width: 400px;
+    }
+    @include media-lt-sm() {
+      width: auto;
+      max-width: 400px;
+      padding-bottom: 24px;
+    }
+    .about {
+      padding-bottom: 20px;
+      font-family: Poppins, $font-stack;
+      font-size: 24px;
+      font-weight: bold;
+      color: $color-shallow-blue;
+      @include media-lt-sm() {
+        text-align: center;
+        font-size: 12px;
+      }
+    }
+    .title {
+      font-family: Poppins, $font-stack;
+      font-size: 36px;
+      font-weight: bold;
+      line-height: 1.33;
+      color: #193782;
+      @include media-lt-sm() {
+        text-align: center;
+        font-size: 24px;
+      }
+    }
+    .description {
+      margin-top: 4px;
+      font-family: Poppins, $font-stack;
+      font-size: 24px;
+      line-height: 1.67;
+      color: rgba(25, 55, 130, 0.6);
+      width: 100%;
+      @include media-lt-sm() {
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+  }
+  .right-container {
+    @include media-lt-md() {
+      margin-top: 24px;
+    }
+    img {
+      width: 600px;
+      @include media-md() {
+        width: 400px;
+      }
+      @include media-sm() {
+        width: 340px;
+      }
+      @include media-lt-sm() {
+        width: 288px;
+      }
+    }
+  }
+}

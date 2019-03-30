@@ -1,0 +1,36 @@
+@import '../../UIKit/styles/utils';
+@import '../../UIKit/styles/responsive-landing';
+
+.nav-item, .nav-item-fixed {
+  height: 80px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  span {
+    text-align: center;
+    font-family: Poppins, $font-stack;
+    font-size: 16px;
+    font-weight: 500;
+    @include media-md() {
+      font-size: 15px;
+    }
+  }
+  @include media-lt-sm() {
+    span {
+      font-size: 12px;
+      line-height: 80px;
+    }
+  }
+}
+
+.nav-item {
+  color: $color-text-white;
+}
+
+.nav-item-fixed {
+  color: rgba(25, 55, 130, 0.6);
+}
+
+.hidden-item {
+  display: none;
+}

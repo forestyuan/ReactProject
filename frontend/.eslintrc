@@ -1,0 +1,12 @@
+{
+  "extends": "react-app",
+  "rules": {
+    "semi": [
+      "warn",
+      "always"
+    ]
+  },
+  "globals": {
+    "StripeCheckout": true
+  }
+}

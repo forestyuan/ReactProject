@@ -1,0 +1,158 @@
+@import "../../UIKit/styles/utils";
+@import "../../UIKit/styles/responsive";
+
+.ram-price-history-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 232px);
+  padding: 20px;
+  h4, p, span {
+    font-family: DIN, $font-stack;
+  }
+  .top-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 48px;
+    padding-bottom: 12px;
+    .chart-title-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    .chart-title {
+      font-weight: normal;
+      flex-basis: 100%;
+      padding-bottom: 12px;
+    }
+    .price, .range-selector {
+      flex-basis: 50%;
+    }
+    .price {
+      display: inline-block;
+      font-size: 52px;
+      color: $color-text-primary;
+      font-weight: 500;
+      span {
+        margin-left: 16px;
+      }
+    }
+    .other {
+      margin-left: 20px;
+      display: inline-block;
+    }
+    .right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      min-width: 200px;
+    }
+    .chart-type-selector-container {
+      margin-top: 8px;
+      margin-right: 32px;
+      margin-bottom: 18px;
+      display: flex;
+      .chart-type-selector {
+        box-sizing: border-box;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 88px;
+        padding: 0 18px;
+        height: 32px;
+        line-height: 32px;
+        border: 1px solid $color-text-shallow;
+        color: $color-text-shallow;
+        img {
+          width: 12px;
+          margin-right: 4px;
+        }
+        &.line {
+          border-right-width: 0;
+          border-top-left-radius: 2px;
+          border-bottom-left-radius: 2px;
+        }
+        &.candle {
+          border-left-width: 0;
+          border-top-right-radius: 2px;
+          border-bottom-right-radius: 2px;
+        }
+        &.active {
+          border-left-width: 1px;
+          border-right-width: 1px;
+          color: $color-active-blue;
+          border-color: $color-active-blue;
+        }
+      }
+    }
+    @include md-rd-xs() {
+      padding: 0;
+      .price {
+        font-size: 48px;
+      }
+      .chart-type-selector-container {
+        margin-right: 0;
+        width: 100%;
+        .chart-type-selector {
+          width: 50%;
+        }
+      }
+      .chart-title-container {
+        margin-top: 32px;
+      }
+    }
+  }
+  .range-selector {
+    align-self: stretch;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-bottom: 12px;
+    margin-right: 32px;
+    .selector {
+      display: flex;
+      width: 100%;
+      max-width: 300px;
+    }
+    .time-range-container {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .time-range {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      font-size: 12px;
+      color: $color-text-shallow;
+      background-color: transparent;
+      &.selected {
+        color: $color-white;
+        background-color: $color-sky-blue;
+      }
+    }
+  }
+  .chart-container {
+    flex: 1;
+    max-width: calc(100vw - 540px);
+
+    > div {
+      height: 100%;
+    }
+    .hide {
+      display: none;
+    }
+    @include md-rd-lt-md() {
+      height: 420px;
+      max-width: 100%;
+    }
+  }
+  @include md-rd-lt-md() {
+    height: auto;
+  }
+}

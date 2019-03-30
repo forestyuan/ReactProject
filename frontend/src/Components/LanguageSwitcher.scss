@@ -1,0 +1,16 @@
+@import "../UIKit/styles/utils";
+@import "../UIKit/styles/responsive";
+
+.button {
+  min-width: 180px;
+  @include md-rd-lt-sm() {
+    min-width: 160px;
+  }
+  @include md-rd-xs() {
+    padding: 4px 12px;
+    height: 32px;
+    span {
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,154 @@
+@import "../../UIKit/styles/utils";
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 40px;
+}
+
+.title-container {
+  width: 349px;
+  height: 123px;
+  margin-top: 140px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.subtitle {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.payment-label {
+  margin-top: 44px;
+  font-size: 14px;
+  font-weight: 500;
+  color: $color-text-primary;
+}
+
+.pay-usd-button {
+  height: 56px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  color: $color-white;
+  font-size: 16px;
+  font-weight: 500;
+  .stripe {
+    font-size: 12px;
+    color: rgba($color-white, 0.6);
+  }
+}
+
+.resource-label {
+  margin-top: 16px;
+  font-size: 12px;
+  font-weight: bold;
+  color: $color-text-primary;
+}
+
+.hint-container {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.divider {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  color: $color-text-shallow;
+  font-size: 12px;
+  hr {
+    height: 1px;
+    background: $color-text-shallow;
+    border: none;
+    flex: 1;
+  }
+  div {
+    margin: 0 12px;
+  }
+}
+
+.send-link-button {
+  position: relative;
+  cursor: pointer;
+  height: 56px;
+  margin: 16px 0;
+  padding: 12px 0;
+  font-size: 13px;
+  .share-action-container {
+    position: absolute;
+    bottom: -96px;
+    right: 0;
+    width: 240px;
+    border-radius: 4px;
+    box-shadow: 0 8px 12px -8px rgba(98, 154, 255, 0.12), 0 12px 16px -8px rgba(98, 154, 255, 0.1), 0 16px 20px -8px rgba(2, 21, 40, 0.04);
+    border: solid 1px $color-shallow-blue;
+    font-size: 14px;
+    color: $color-text-primary;
+    background-color: $color-white;
+    .line {
+      border-bottom: 1px solid rgba(2, 21, 40, 0.04);
+    }
+    .action-row {
+      padding: 15px 20px;
+      &:hover {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.hint {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 12px;
+  color: $color-text-secondary;
+}
+
+.email-friend-overlay-container {
+  padding: 28px;
+  .top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-sky-blue;
+    i {
+      cursor: pointer;
+      font-size: 24px;
+    }
+  }
+  .input-container {
+    margin-top: 100px;
+    margin-bottom: 60px;
+    input {
+      width: 100%;
+      font-size: 20px;
+      outline: none;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid $color-border;
+    }
+    .hint {
+      text-align: left;
+      font-size: 12px;
+      margin-top: 4px;
+      color: $color-text-secondary;
+    }
+  }
+  .ok-button {
+    margin: 0 auto;
+    width: 120px;
+  }
+}

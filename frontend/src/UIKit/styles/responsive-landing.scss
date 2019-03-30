@@ -1,0 +1,86 @@
+// 响应式规则
+$xs-width: 320px;
+$sm-width: 600px;
+$md-width: 960px;
+$lg-width: 1440px;
+$hg-width: 1920px;
+body {
+  min-width: $xs-width;
+}
+
+@mixin media-xs {
+  @media (min-width: #{$xs-width}) and (max-width: #{$sm-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin media-sm {
+  @media (min-width: #{$sm-width}) and (max-width: #{$md-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @media (min-width: #{$md-width}) and (max-width: #{$lg-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media (min-width: #{$lg-width}) and (max-width: #{$hg-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin media-hg {
+  @media (min-width: #{$hg-width}) {
+    @content;
+  }
+}
+
+// x >= 960
+@mixin media-gt-md {
+  @media (min-width: #{$md-width}) {
+    @content;
+  }
+}
+
+// x >= 1440
+@mixin media-gt-lg {
+  @media (min-width: #{$lg-width}) {
+    @content;
+  }
+}
+
+// x < 1440
+@mixin media-lt-lg {
+  @media (max-width: #{$lg-width - 1px}) {
+    @content;
+  }
+}
+
+// x < 960
+@mixin media-lt-md {
+  @media (max-width: #{$md-width - 1px}) {
+    @content;
+  }
+}
+
+// x < 600
+@mixin media-lt-sm {
+  @media (max-width: #{$sm-width - 1px}) {
+    @content;
+  }
+}
+
+.hide-xs {
+  @include media-xs() {
+    display: none;
+  }
+}
+
+.hide-sm {
+  @include media-sm() {
+    display: none;
+  }
+}

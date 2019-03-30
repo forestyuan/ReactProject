@@ -1,0 +1,47 @@
+@import '../../UIKit/styles/utils';
+@import '../../UIKit/styles/responsive';
+
+.account-tabs {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  white-space: nowrap;
+  font-size: 16px;
+  color: $color-text-secondary;
+  .logo-container {
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin-top: 4px;
+    box-sizing: border-box;
+    background-color: $color-white;
+    //box-shadow: 0 20px 48px 0 rgba(183, 197, 222, 0.2);
+    display: none;
+  }
+  .tab {
+    padding-left: 50px;
+  }
+  .active-tab {
+    color: $color-sky-blue;
+    font-weight: bold;
+  }
+  @include md-rd-lt-md() {
+    justify-content: space-between;
+    .logo-container {
+      display: flex;
+    }
+    .tab {
+      padding-left: 0;
+    }
+    .new-account-tab {
+      margin-left: 40px;
+      margin-right: 20px;
+    }
+    .check-status-tab {
+      margin-left: 20px;
+      margin-right: 40px;
+    }
+  }
+}

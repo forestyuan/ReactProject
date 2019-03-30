@@ -1,0 +1,111 @@
+@import "../../UIKit/styles/utils";
+@import "../../UIKit/styles/responsive";
+
+.account-info-stage-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include md-rd-xs() {
+    margin-top: 100px;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.already-request {
+  min-height: 80px;
+  margin-bottom: 108px;
+  @include md-rd-xs() {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+}
+
+.check-button {
+  margin-top: 20px;
+  width: 188px;
+}
+
+.page-summary {
+  margin-bottom: 108px;
+  @include md-rd-xs() {
+    margin-bottom: 80px;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 48px;
+    @include md-rd-xs() {
+      text-align: center;
+    }
+  }
+  p, span {
+    font-size: 14px;
+    line-height: 1.7;
+    color: $color-text-primary;
+  }
+  p:last-child {
+    margin-top: 32px;
+  }
+}
+
+.stage-wrapper {
+  display: flex;
+  margin: 0 20px;
+  align-items: center;
+  @include md-rd-xs() {
+    min-width: 300px;
+  }
+  .stage {
+    position: relative;
+    height: 20px;
+    width: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > div {
+      position: absolute;
+    }
+    .finished {
+      width: 20px;
+      height: 20px;
+      font-size: 12px;
+      border-radius: 50%;
+      background-color: $color-sky-blue;
+      color: $color-white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .active, .inactive {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: 1px solid $color-sky-blue;
+    }
+    .active {
+      background-color: $color-sky-blue;
+    }
+  }
+  .stage-name {
+    white-space: nowrap;
+    font-size: 14px;
+    color: $color-text-secondary;
+    position: absolute;
+    top: 36px;
+  }
+  .line {
+    flex: 1;
+    height: 1px;
+    background-image: linear-gradient(to right, $color-text-shallow, rgba(255, 255, 255, 0) 40%);
+    background-position: top;
+    background-size: 8px 2px;
+    background-repeat: repeat-x;
+  }
+}

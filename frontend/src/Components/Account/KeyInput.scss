@@ -1,0 +1,22 @@
+@import "../../UIKit/styles/utils";
+
+.key-input-container {
+  input {
+    font-family: DIN, $font-stack;
+    padding-bottom: 8px;
+    background: transparent;
+    color:$color-text-primary;
+    width: 100%;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid $color-border;
+    font-size: 12px;
+  }
+  .error {
+    color: $color-orange;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+}

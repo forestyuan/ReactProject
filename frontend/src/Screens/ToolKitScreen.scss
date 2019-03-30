@@ -1,0 +1,31 @@
+@import "../UIKit/styles/utils";
+
+.scatter-container {
+  height: 300px;
+}
+
+.voting-power {
+  width: 600px;
+  max-width: calc(100% - 12px);
+  margin: 0 auto;
+  .slider {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.table-container {
+  margin-top: 20px;
+  width: 100%;
+  .thead {
+    height: 30px;
+    background-color: $color-sky-blue;
+  }
+  .tbody {
+    text-align: center;
+    .row {
+      height: 80px;
+    }
+  }
+}
+

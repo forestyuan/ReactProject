@@ -1,0 +1,25 @@
+@import "../../UIKit/styles/utils";
+@import "../../UIKit/styles/responsive";
+
+.check-status-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 40px;
+  @include md-rd-xs() {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .content-wrapper {
+    flex: 1;
+    padding-top: 300px;
+  }
+  .action-container {
+    margin-top: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

@@ -1,0 +1,12 @@
+@import "../UIKit/styles/utils";
+
+.container {
+  background: transparent;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.content {
+  font-family: Poppins, $font-stack;
+}

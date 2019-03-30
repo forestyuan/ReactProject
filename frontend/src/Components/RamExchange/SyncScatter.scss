@@ -1,0 +1,180 @@
+@import "../../UIKit/styles/utils";
+
+.sync-scatter {
+  position: relative;
+  background-image: linear-gradient(#2863cc, #2863cc),
+  linear-gradient(to right, rgba(60, 60, 60, 0.5), rgba(16, 10, 10, 0));
+  height: 100%;
+}
+
+.hint {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: $color-white;
+  .hint-text {
+    opacity: 0.6;
+    font-size: 16px;
+    color: $color-white;
+    margin-bottom: 32px;
+  }
+  .sync-button, .create-button {
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    height: 40px;
+    border-radius: 32px;
+    box-shadow: 0 10px 14px 0 rgba(43, 131, 255, 0.2);
+  }
+  .sync-button {
+    background-color: $color-sky-blue;
+    margin-bottom: 16px;
+  }
+  .create-button {
+    background-color: rgba(98, 154, 255, 0.1);
+    border: 1px solid $color-shallow-blue;
+    margin-bottom: 20px;
+  }
+  .how-to-trade-ram {
+    font-size: 12px;
+    text-decoration: underline;
+  }
+}
+
+.info {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: stretch;
+  color: $color-white;
+  .header {
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 120px;
+    > * {
+      display: block;
+      padding-right: 4px;
+    }
+  }
+  .content {
+    padding: 0 12px;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      color: $color-white;
+      text-align: center;
+      font-weight: 500;
+    }
+    > div {
+      flex-basis: 50%;
+      justify-content: center;
+    }
+    .progress-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 12px;
+    }
+    .progress-bar {
+      width: 120px;
+      height: 4px;
+      border-radius: 4px;
+      margin-right: 8px;
+      background-color: rgba($color-bg-grey, 0.12);
+      .progress {
+        height: 100%;
+        border-radius: 4px;
+        background-color: rgba($color-bg-grey, 0.8);
+      }
+    }
+  }
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.12), rgba(243, 252, 5255, 0.12));
+    > div {
+      flex-basis: 50%;
+      padding: 20px 20px 20px 0;
+      * {
+        text-align: center;
+      }
+      &:first-child {
+        border-right: 1px solid rgba(40, 99, 204, 0.87);
+      }
+    }
+    .resource-info {
+      display: flex;
+      > div {
+        align-self: stretch;
+      }
+    }
+    .eos-unstaked {
+      flex-basis: 60%;
+    }
+    .cpu-net {
+      flex-basis: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      > div {
+        display: flex;
+        justify-content: space-between;
+      }
+      span {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.account-summary {
+  position: absolute;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  top: 50px;
+  left: 18px;
+  width: 240px;
+  height: 160px;
+  box-sizing: border-box;
+  background-color: $color-white;
+  .account-name {
+    height: 50px;
+    border-bottom: 1px solid rgba($color-text-base, 0.04);
+  }
+  .scatter-auth {
+    height: 50px;
+  }
+  > article {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 12px 20px;
+  }
+  .log-out {
+    margin: 0 20px 20px;
+  }
+}

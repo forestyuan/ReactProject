@@ -1,0 +1,17 @@
+@import "../../UIKit/styles/utils";
+@import "../../UIKit/styles/responsive";
+
+.mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba($color-bg-grey, 0.87);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include md-rd-lt-md() {
+    display: none;
+  }
+}

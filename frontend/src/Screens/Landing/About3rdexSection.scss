@@ -1,0 +1,127 @@
+@import '../../UIKit/styles/utils';
+@import '../../UIKit/styles/responsive-landing';
+
+.about-3rdex-section-container {
+  background-color: $color-pure-white;
+  padding: 0 240px 100px 240px;
+  @include media-md() {
+    padding: 0 40px 200px 40px;
+  }
+  @include media-sm() {
+    padding: 0 72px 120px 72px;
+  }
+  @include media-xs() {
+    padding: 0 40px 120px 40px;
+  }
+  .about, .title, .description {
+    margin: 0;
+  }
+  .feature-community-controlled, .feature-security-deposit, .feature-virtual-trading-mining {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include media-lt-md() {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .feature-security-deposit, .feature-virtual-trading-mining {
+    @include media-lt-md() {
+      display: none;
+    }
+  }
+  .feature-community-controlled, .feature-security-deposit {
+    padding-bottom: 120px;
+    @include media-sm() {
+      padding-bottom: 80px;
+    }
+    @include media-xs() {
+      padding-bottom: 80px;
+    }
+  }
+  .feature-community-controlled{
+    @include media-lt-md() {
+      .content-container {
+        order: 1;
+      }
+      .image-container {
+        order: 2;
+      }
+    }
+  }
+  .content-container {
+    width: 600px;
+    padding-top: 80px;
+    @include media-md() {
+      width: 400px;
+    }
+    @include media-sm() {
+      width: auto;
+      max-width: 400px;
+      flex-basis: 50%;
+    }
+    @include media-lt-sm() {
+      width: auto;
+      max-width: 400px;
+      padding-top: 0;
+      padding-bottom: 24px;
+    }
+    .about {
+      padding-bottom: 20px;
+      font-family: Poppins, $font-stack;
+      font-size: 24px;
+      line-height: 24px;
+      font-weight: bold;
+      color: $color-shallow-blue;
+      @include media-lt-sm() {
+        text-align: center;
+        font-size: 12px;
+      }
+    }
+    .title {
+      font-family: Poppins, $font-stack;
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 52px;
+      color: #193782;
+      @include media-lt-sm() {
+        text-align: center;
+        font-size: 24px;
+        line-height: 1.2;
+      }
+    }
+    .description {
+      margin-top: 4px;
+      font-family: Poppins, $font-stack;
+      font-size: 24px;
+      line-height: 1.67;
+      color: rgba(25, 55, 130, 0.6);
+      @include media-lt-sm() {
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+
+  }
+  .image-container {
+    @include media-lt-md() {
+      margin-top: 24px;
+    }
+    img {
+      width: 600px;
+      @include media-lg() {
+        width: 400px;
+      }
+      @include media-md() {
+        width: 400px;
+      }
+      @include media-sm() {
+        width: 340px;
+      }
+      @include media-lt-sm() {
+        width: 288px;
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+$font-stack: PingFang SC, RobotoDraft, Roboto, "Helvetica Neue", Helvetica, Arial, STHeiti, "华文黑体", "Microsoft YaHei", "微软雅黑", sans-serif;
+$color-pure-white: #ffffff;
+$color-white: #fdfdfd;
+$color-bg-grey: #f0f3f5;
+$color-text-white: #f0f3f5;
+$color-text-base: rgb(8, 33, 59);
+$color-text-primary: rgba(8, 33, 59, 0.87);
+$color-text-secondary: rgba(8, 33, 59, 0.56);
+$color-text-shallow: rgba(8, 33, 59, 0.34);
+$color-shallow-blue: #a2c3fe;
+$color-sky-blue: #629aff;
+$color-active-blue: #4e7df5;
+$color-bg-blue: rgba(162, 195, 254, 0.12);
+$color-orange: #ef6d65;
+$color-green: #57c892;
+$color-border: rgba(63, 108, 153, 0.16);
+
+$layer-base: 0;
+$layer-nav: 5;
+$layer-overlay: 10;
+$layer-overlay-content: 15;
+
+.color-text-white {
+  color: $color-white;
+}
+
+.color-text-primary {
+  color: $color-text-primary;
+}
+
+.color-text-secondary {
+  color: $color-text-secondary;
+}
+
+.color-text-shallow {
+  color: $color-text-shallow;
+}
+
+.color-text-blue {
+  color: $color-sky-blue;
+}
+
+.color-text-green {
+  color: $color-green;
+}
+
+.color-text-orange {
+  color: $color-orange;
+}
+
+.color-bg-grey {
+  color: $color-bg-grey;
+}
+
+.color-sky-blue {
+  color: $color-sky-blue;
+}
+
+/*font size*/
+
+.font-12 {
+  font-size: 12px;
+}
+
+.font-14 {
+  font-size: 14px;
+}
+
+.font-16 {
+  font-size: 16px;
+}
+
+.font-18 {
+  font-size: 18px;
+}
+
+.font-20 {
+  font-size: 20px;
+}
+
+.font-24 {
+  font-size: 24px;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+/*helper*/
+.cursor-pointer {
+  cursor: pointer;
+}
+
+
+
+

@@ -1,0 +1,223 @@
+@import '../../UIKit/styles/utils';
+@import '../../UIKit/styles/responsive-landing';
+
+$bg-layer: 1;
+
+.features-section-container {
+  background-color: $color-pure-white;
+  padding-bottom: 180px;
+  @include media-md() {
+    padding-bottom: 380px;
+  }
+  @include media-sm() {
+    padding-bottom: 120px;
+  }
+  @include media-xs() {
+    padding-bottom: 0;
+  }
+  @include media-lg() {
+    padding-bottom: 80px;
+  }
+
+  p, h2, h3 {
+    margin: 0;
+  }
+
+  .poster {
+    position: relative;
+    @include media-lg() {
+      height: 880px;
+    }
+    @include media-md() {
+      height: 880px;
+    }
+
+    .bg-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      .top-left-bg {
+        background-image: linear-gradient(113deg, #6e9ae2, #8caae5);
+
+        .rect-1 {
+          width: 2100px;
+          height: 560px;
+          -webkit-transform: translateY(-100px) rotate(-15deg);
+          -ms-transform: translateY(-100px) rotate(-15deg);
+          transform: translate(-100px, 180px) rotate(-11deg);
+          background-image: linear-gradient(113deg, #6392ef, #85aae4);
+          @include media-lt-lg() {
+            width: 1500px;
+          }
+        }
+
+        @include media-xs() {
+          height: 620px;
+          .rect-1 {
+            transform: translateY(460px) translateX(-100px) rotate(-15deg);
+            height: 200px;
+            width: 600px;
+          }
+        }
+      }
+
+      .bottom-right-bg {
+        z-index: $bg-layer;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 180px;
+        background: no-repeat right center;
+        background-size: 1100px;
+        @include media-md() {
+          top: 480px;
+        }
+        @include media-sm() {
+          top: 360px;
+          background-size: 600px;
+        }
+        @include media-xs() {
+          top: 280px;
+          background: no-repeat center;
+          background-size: 120%;
+        }
+      }
+    }
+
+    .content-container {
+      z-index: $bg-layer;
+      position: relative;
+      padding: 260px 740px 540px 300px;
+      box-sizing: content-box;
+      @include media-lg() {
+        width: 650px;
+        padding: 296px 130px 0 120px;
+      }
+      @include media-md() {
+        width: 650px;
+        padding: 280px 20px 195px 120px;
+      }
+      @include media-sm() {
+        padding: 280px 120px 420px 120px;
+      }
+      @include media-xs() {
+        padding: 180px 40px 420px 40px;
+      }
+      @include media-lt-md() {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .title, .content, .ram-exchange-beta-btn {
+          text-align: center;
+        }
+      }
+
+      .title {
+        font-family: Poppins, $font-stack;
+        font-size: 80px;
+        font-weight: bold;
+        line-height: 1;
+        color: $color-text-white;
+        @include media-lg() {
+          font-size: 56px;
+          line-height: 64px;
+        }
+        @include media-md() {
+          font-size: 56px;
+        }
+        @include media-sm() {
+          font-size: 32px;
+        }
+        @include media-xs() {
+          line-height: 1.17;
+          font-size: 24px;
+        }
+      }
+
+      .content {
+        margin-top: 24px;
+        font-family: Poppins, $font-stack;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.33;
+        color: $color-text-white;
+        @include media-lg() {
+          margin-top: 16px;
+          font-size: 18px;
+          line-height: 26px;
+        }
+        @include media-md() {
+          font-size: 18px;
+        }
+        @include media-sm() {
+          font-size: 18px;
+        }
+        @include media-lt-sm() {
+          max-width: 280px;
+          font-size: 12px;
+          line-height: 1.33;
+          margin-right: 0;
+        }
+      }
+
+      .button-row {
+        display: flex;
+
+        .download-beta-btn, .ram-exchange-beta-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 36px;
+          margin-top: 72px;
+          width: 416px;
+          height: 64px;
+          box-shadow: 0 16px 20px 0 rgba(2, 21, 40, 0.04),
+          0 12px 16px 0 rgba(98, 154, 255, 0.1),
+          0 8px 12px 0 rgba(98, 154, 255, 0.2);
+          cursor: pointer;
+
+          a {
+            font-family: DIN, $font-stack;
+            font-size: 18px;
+            font-weight: 500;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          @include media-lg() {
+            margin-top: 42px;
+          }
+          @include media-md() {
+            margin-top: 40px;
+          }
+          @include media-lt-sm() {
+            width: 288px;
+            margin-top: 40px;
+          }
+        }
+
+        .download-beta-btn {
+          background-color: #f0f3f5;
+          margin-right: 20px;
+
+          a {
+            color: #4e7df5;
+          }
+        }
+
+        .ram-exchange-beta-btn {
+          border: 1px solid $color-white;
+
+          a {
+            color: $color-white;
+          }
+        }
+      }
+
+    }
+  }
+}

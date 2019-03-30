@@ -1,0 +1,61 @@
+@import "../UIKit/styles/utils";
+@import "../UIKit/styles/responsive";
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.tokens-container {
+  height: 80px;
+  display: flex;
+}
+
+.token {
+  padding: 5px;
+  &.active {
+    background: $color-sky-blue;
+  }
+}
+
+.info-container {
+  flex: 1;
+  display: flex;
+}
+
+.chart-container {
+  flex: 3;
+  background: grey;
+}
+
+.list-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ask-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: red;
+}
+
+.bid-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: blue;
+}
+
+.action-container {
+  height: 200px;
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+}

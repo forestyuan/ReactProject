@@ -1,0 +1,136 @@
+// 响应式规则
+$xs-width: 320px;
+$sm-width: 768px;
+$md-width: 1024px;
+$lg-width: 1440px;
+
+// x < 768
+@mixin md-rd-xs {
+  @media (max-width: #{$sm-width - 1px}) {
+    @content;
+  }
+}
+
+// 768 <= x < 960
+@mixin md-rd-sm {
+  @media (min-width: #{$sm-width}) and (max-width: #{$md-width - 1px}) {
+    @content;
+  }
+}
+
+// 960 <= x < 1440
+@mixin md-rd-md {
+  @media (min-width: #{$md-width}) and (max-width: #{$lg-width - 1px}) {
+    @content;
+  }
+}
+
+// x >= 768
+@mixin md-rd-gt-xs {
+  @media (min-width: #{$sm-width}) {
+    @content;
+  }
+}
+
+// x >= 960
+@mixin md-rd-gt-sm {
+  @media (min-width: #{$md-width}) {
+    @content;
+  }
+}
+
+// x >= 1440
+@mixin md-rd-gt-md {
+  @media (min-width: #{$lg-width}) {
+    @content;
+  }
+}
+
+// x < 1440
+@mixin md-rd-lt-lg {
+  @media (max-width: #{$lg-width -1px}) {
+    @content;
+  }
+}
+
+// x < 960
+@mixin md-rd-lt-md {
+  @media (max-width: #{$md-width - 1px}) {
+    @content;
+  }
+}
+
+// x < 768
+@mixin md-rd-lt-sm {
+  @media (max-width: #{$sm-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin md-rd-xxs {
+  @media (max-width: #{400px}) {
+    @content;
+  }
+}
+
+.hide-lt-xs {
+  @include md-rd-lt-sm() {
+    display: none;
+  }
+}
+
+.hide-gt-xs {
+  @include md-rd-gt-sm() {
+    display: none;
+  }
+}
+
+.hide-xs {
+  @include md-rd-xs() {
+    display: none;
+  }
+}
+
+// small
+.hide-lt-sm {
+  @include md-rd-lt-sm() {
+    display: none;
+  }
+}
+
+.hide-gt-sm {
+  @include md-rd-gt-sm() {
+    display: none;
+  }
+}
+
+.hide-sm {
+  @include md-rd-sm() {
+    display: none;
+  }
+}
+
+// md
+.hide-lt-md {
+  @include md-rd-lt-md() {
+    display: none;
+  }
+}
+
+.hide-gt-md {
+  @include md-rd-gt-md() {
+    display: none;
+  }
+}
+
+.ramInput {
+  @include md-rd-gt-xs() {
+    display: none;
+  }
+}
+
+.hide-md {
+  @include md-rd-md() {
+    display: none;
+  }
+}

@@ -1,0 +1,74 @@
+@import "../../UIKit/styles/utils";
+@import "../../UIKit/styles/responsive";
+
+.account-container {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url('../../Images/create-account-bg.svg');
+  min-height: 820px;
+  margin-bottom: 100px;
+  @include md-rd-xs() {
+    display: flex;
+    flex-direction: column;
+    min-height: 820px;
+    padding-bottom: 40px;
+    background-color: $color-bg-grey;
+  }
+}
+
+.account-form {
+  flex: 1;
+  width: 100%;
+  @include md-rd-gt-xs() {
+    min-width: 500px;
+    width: 42%;
+  }
+}
+
+.account-info {
+  flex: 1;
+  @include md-rd-gt-sm() {
+    padding: 0 120px;
+  }
+  @include md-rd-sm() {
+    padding: 0 48px;
+  }
+  @include md-rd-xs() {
+    padding: 0;
+  }
+}
+
+.account-creation-panel {
+  min-height: 680px;
+  box-shadow: 0 20px 48px 0 rgba(183, 197, 222, 0.2);
+  background: $color-white url(../../Images/new-account-panel-bg.svg) no-repeat;
+  background-size: 500px 166px;
+  background-position: right 30px;
+  > div {
+    height: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    @include md-rd-xs() {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
+
+.contact-us {
+  margin-top: 32px;
+  margin-left: 50px;
+  font-size: 12px;
+  color: $color-text-primary;
+  a {
+    color: $color-sky-blue;
+  }
+  @include md-rd-xs() {
+    display: flex;
+    margin-left: 0;
+    align-items: center;
+    justify-content: center;
+  }
+}
